@@ -12,7 +12,7 @@ public class HelloController {
     @Autowired
     public HelloService helloService;
 
-    @GetMapping("/v1/api/greeting/{name}")
+    @GetMapping("/api/v1/greeting/{name}")
     public String greeting(@PathVariable String name) {
         return helloService.sayHello(name);
     }

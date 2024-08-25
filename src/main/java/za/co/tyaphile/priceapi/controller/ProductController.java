@@ -16,22 +16,22 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-    @GetMapping("/v1/api/product/{id}")
+    @GetMapping("/api/v1/product/{id}")
     public Product getProduct(@PathVariable Long id) {
         return productService.getProductById(id);
     }
 
-    @GetMapping("/v1/api/products")
+    @GetMapping("/api/v1/products")
     public List<Product> getProducts() {
         return productService.getAllProducts();
     }
 
-    @GetMapping("/v1/api/products/{value}")
+    @GetMapping("/api/v1/products/{value}")
     public List<Product> getProducts(@PathVariable String value) {
         return productService.getProductsByName(value);
     }
 
-    @PostMapping("/v1/api/product")
+    @PostMapping("/api/v1/product")
     public ResponseEntity<Product> addProduct(@RequestBody Product product) {
         productService.saveProduct(product);
         return ResponseEntity.status(HttpStatus.CREATED)

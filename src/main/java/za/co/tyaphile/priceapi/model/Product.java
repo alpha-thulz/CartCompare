@@ -11,6 +11,7 @@ public class Product {
     private String product_description;
     private double product_old_price;
     private double product_current_price; ;
+    private String product_weight;
     private String product_measure;
     private String product_bulk ;
     private String product_image;
@@ -18,14 +19,15 @@ public class Product {
 
     public Product() {}
 
-    public Product(String id, String product_name, String product_description,
-                   double product_old_price, double product_current_price,
-                   String product_measure, String product_bulk, String product_image, String product_link) {
+    public Product(String id, String product_name, String product_description, double product_old_price,
+                   double product_current_price, String product_weight, String product_measure, String product_bulk,
+                   String product_image, String product_link) {
         this.id = id;
         this.product_name = product_name;
         this.product_description = product_description;
         this.product_old_price = product_old_price;
         this.product_current_price = product_current_price;
+        this.product_weight = product_weight;
         this.product_measure = product_measure;
         this.product_bulk = product_bulk;
         this.product_image = product_image;
@@ -70,6 +72,14 @@ public class Product {
 
     public void setProduct_current_price(double product_current_price) {
         this.product_current_price = product_current_price;
+    }
+
+    public String getProduct_weight() {
+        return product_weight;
+    }
+
+    public void setProduct_weight(String product_weight) {
+        this.product_weight = product_weight;
     }
 
     public String getProduct_measure() {
